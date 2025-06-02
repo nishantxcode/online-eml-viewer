@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EML File Reader - Professional Email Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-envelope-open"></i>
+                    <h1>EML Reader Pro</h1>
+                </div>
+                <p class="subtitle">Professional Email File Viewer - Secure & Private</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Drop your EML files here</h3>
+                    <p>or click to browse and select files</p>
+                    <input type="file" id="fileInput" accept=".eml" multiple style="display: none;">
+                    <div class="upload-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% secure - files processed locally in your browser</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="emailContent" class="email-display" style="display: none;"></div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 EML Reader Pro. All files processed locally for maximum privacy.</p>
+        </footer>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing EML file...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

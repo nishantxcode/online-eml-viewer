@@ -1,0 +1,377 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4b6cb7 0%, #6c3483 100%);
+    color: #333;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.app-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Drop Zone Styles */
+.drop-zone {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.drop-zone.drag-over {
+    background: #f8f9fa;
+    border: 2px dashed #4b6cb7;
+    transform: scale(1.02);
+}
+
+.upload-content {
+    padding: 2rem;
+}
+
+.upload-content i {
+    font-size: 3rem;
+    color: #4b6cb7;
+    margin-bottom: 1rem;
+}
+
+.upload-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.browse-button {
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+}
+
+.browse-button:hover {
+    background: #3a5a9f;
+    transform: translateY(-2px);
+}
+
+.selected-file-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background: #f1f8ff;
+    border: 1px solid #4b6cb7;
+    border-radius: 4px;
+    color: #2c3e50;
+}
+
+.selected-file-info i {
+    margin-right: 0.5rem;
+    color: #4b6cb7;
+}
+
+.selected-file-info.hidden {
+    display: none;
+}
+
+.show-mail-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+    margin-left: 1rem;
+}
+
+.show-mail-button:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+.show-mail-button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.security-message {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.security-message i {
+    font-size: 1rem;
+    color: #27ae60;
+    margin-right: 0.5rem;
+}
+
+/* Email Display Styles */
+.email-display {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-out;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.email-display.hidden {
+    display: none;
+}
+
+.email-header-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-fields .field {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-fields label {
+    font-weight: 600;
+    min-width: 80px;
+    color: #4b6cb7;
+    margin-right: 1rem;
+}
+
+.header-fields span {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* Attachments Section */
+.attachments-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.attachments-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.attachment-item i {
+    margin-right: 1rem;
+    color: #4b6cb7;
+}
+
+.attachment-info {
+    flex-grow: 1;
+}
+
+.download-button {
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background: #3a5a9f;
+}
+
+/* Email Body */
+.email-body-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 1rem;
+    border: 1px solid #e1e8ed;
+}
+
+.email-body {
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.email-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4b6cb7;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+/* Error Message */
+.error-message {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4757;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.error-message i {
+    margin-right: 1rem;
+}
+
+.dismiss-button {
+    margin-left: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 1rem;
+    }
+
+    .app-header h1 {
+        font-size: 2rem;
+    }
+
+    .email-header-card {
+        padding: 1rem;
+    }
+
+    .header-fields .field {
+        flex-direction: column;
+    }
+
+    .header-fields label {
+        min-width: auto;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .upload-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .email-display {
+        padding: 1rem;
+    }
+} 
