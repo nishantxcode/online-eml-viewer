@@ -311,10 +311,25 @@ body {
     cursor: pointer;
 }
 
+
+
 /* Utility Classes */
 .hidden {
     display: none !important;
 }
+
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    color: #f1eaea;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #57d8f2;
+    text-decoration: underline;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
