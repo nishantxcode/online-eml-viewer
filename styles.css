@@ -77,7 +77,7 @@ body {
 }
 
 .browse-button {
-    background: #4b6cb7;
+    background: #27ae60;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -128,7 +128,7 @@ body {
 }
 
 .show-mail-button:hover {
-    background: #219a52;
+    background: #3a5a9f;
     transform: translateY(-2px);
 }
 
